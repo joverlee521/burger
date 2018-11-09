@@ -1,10 +1,14 @@
 var connection = require("./connection");
 
-var ORM = {
-    selectAll: function(){
-
+var orm = {
+    selectAll: function(table, cb){
+        var queryString = "SELECT * FROM " + table + ";";
+        connection.query(queryString, function(err, result){
+            if(err) throw err;
+            cb(result);
+        });
     },
-    insertOne: function(){
+    insertOne: function(table, ){
 
     },
     updateOne: function(){
@@ -12,4 +16,4 @@ var ORM = {
     }
 };
 
-module.exports = ORM;
+module.exports = orm;
