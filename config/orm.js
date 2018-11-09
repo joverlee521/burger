@@ -8,8 +8,13 @@ var orm = {
             cb(result);
         });
     },
-    insertOne: function(table, ){
-
+    insertOne: function(table, cols, vals, cb){
+        var queryString = "INSERT INTO ?? (??) VALUES (?)"
+        connection.query(queryString, [table, cols, vals], function(err, result){
+            if(err) throw err;
+            console.log(vals);
+            cb(result);
+        });
     },
     updateOne: function(){
 
