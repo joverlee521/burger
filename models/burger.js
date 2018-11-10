@@ -11,8 +11,15 @@ var burger = {
             cb(res);
         });
     },
-    update: function(){
-        ORM.updateOne();
+    update: function(colValObj, id, cb){
+        orm.updateOne("burgers", colValObj, id, function(res){
+            cb(res);
+        });
+    },
+    delete: function(id, cb){
+        orm.delete("burgers", id, function(res){
+            cb(res);
+        });
     }
 };
 
