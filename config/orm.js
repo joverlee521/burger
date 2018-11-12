@@ -34,7 +34,6 @@ var orm = {
         var queryString = "INSERT INTO " + table + " (" + cols.toString() + ") VALUES (" + addQuestionMarks(vals.length) +  ");";
         connection.query(queryString,vals, function(err, result){
             if(err) throw err;
-            console.log(vals);
             cb(result);
         });
     },
