@@ -1,3 +1,11 @@
-.page-title {
+body{
     background-color: #F4E600;
+}
+
+.burgers-list{
+    margin-top: 12rem;
+}
+
+.devour-button{
+    float: right;
 }

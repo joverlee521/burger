@@ -1,12 +1,6 @@
-<div class="row mt-4 text-center page-title">
-    <div class="col">
-        <h1 class="display-4">Eat-Da-Burger</h1>
-        <img src="/assets/img/burgericon.png" class="img-fluid" alt="burger icon">
-    </div>
-</div> 
 <div class="container">
     <div class="row">
-        <div class="col-4">
+        <div class="col-4 burgers-list">
             <h5 class="text-center">Available Burgers</h5>
             <hr>
             <ul class="list-group">
@@ -17,8 +11,19 @@
                 {{/each}}
             </ul>
         </div>
-        <div class="col-4"></div>
-        <div class="col-4">
+        <div class="col-4 text-center mt-5">
+            <h1 class="display-4">Eat-Da-Burger</h1>
+            <img src="/assets/img/burgericon.png" class="img-fluid" alt="burger icon">
+            <h2 class="mt-5">Add a Burger!</h2>
+            <form id="burger-form">
+                <div class="form-group">
+                    <label for="burger-input">What burger would you like to eat?</label>
+                    <input type="text" class="form-control" id="burger-input">
+                </div>
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </form>
+        </div>
+        <div class="col-4 burgers-list">
             <h5 class="text-center">Devoured Burgers</h5>
             <hr>
             <ul class="list-group">
@@ -28,18 +33,6 @@
                     {{/if}}
                 {{/each}}
             </ul>
-        </div>
-    </div>
-    <div class="row my-3 justify-content-center">
-        <div class="col-lg-6 col-12 text-center">
-            <h2>Add a Burger!</h2>
-            <form id="burger-form">
-                <div class="form-group">
-                    <label for="burger-input">What burger would you like to eat?</label>
-                    <input type="text" class="form-control" id="burger-input">
-                </div>
-                <button type="submit" class="btn btn-danger">Submit</button>
-            </form>
         </div>
     </div>
 </div>
