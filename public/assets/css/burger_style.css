@@ -6,6 +6,11 @@ body{
     margin-top: 12rem;
 }
 
+.burger-item{
+    padding: .8rem .5rem;
+}
+
 .devour-button{
     float: right;
+    font-size: .7rem;
 }
