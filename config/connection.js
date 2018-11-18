@@ -1,8 +1,8 @@
 // Set up MySQL connection
 var mysql = require("mysql");
-
 var connection;
 
+// Connect to JawsDB if availabe, else connect to localhost
 if(process.env.JAWSDB_URL){
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else{
@@ -14,7 +14,6 @@ if(process.env.JAWSDB_URL){
         database: "burgers_db"
     });
 }
-
 
 // Make connection to MySQL database
 connection.connect(function(err){
