@@ -1,6 +1,7 @@
+{{!-- Each burger item displays burger name and a button --}}
 <li class="list-group-item burger-item">
     {{burger_name}}
-
+    {{!-- Button's text changes depending on the devour state --}}
     <button class="btn btn-outline-success devour-button" data-id="{{id}}" data-devour="{{devour}}">
         {{#if devour}}DEVOUR!{{else}}DIGEST!{{/if}}
     </button>
